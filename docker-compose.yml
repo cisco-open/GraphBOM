@@ -1,0 +1,77 @@
+version: "3"
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql-container
+    hostname: mysql
+    ports:
+      - "3333:3306"
+    expose:
+      - 3333
+    volumes:
+      - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
+    env_file:
+      - .env
+
+  lib:
+    build: lib
+    command: sh -c "/wait && flask run --host=0.0.0.0"
+    depends_on:
+      - mysql
+    volumes:
+      - ./lib:/backend
+    environment:
+      - FLASK_ENV=development
+      - FLASK_APP=app.py
+      - FLASK_RUN_PORT=5000
+      - WAIT_HOSTS=mysql:3306
+      - WAIT_HOSTS_TIMEOUT=300
+      - WAIT_SLEEP_INTERVAL=5
+      - WAIT_HOST_CONNECT_TIMEOUT=30
+    ports:
+      - "9000:5000"
+
+  web-app:
+    build: web-app
+    command: ["npm", "start"]
+    volumes:
+      - ./web-app:/frontend
+      - node-modules:/frontend/node_modules
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - "9090:9090"
+    depends_on:
+      - lib
+
+  blockchain-api:
+    build: blockchain-api
+    command: sh -c "/wait && uvicorn client_fastapiV3:app --reload --host:0.0.0.0 --port 7000"
+    depends_on:
+      - mysql
+    volumes:
+      - ./blockchain-api:/blockchain
+    environment:
+      - WAIT_HOSTS=mysql:3306
+      - WAIT_HOSTS_TIMEOUT=300
+      - WAIT_SLEEP_INTERVAL=5
+      - WAIT_HOST_CONNECT_TIMEOUT=30
+    ports:
+      - "7000:8000"
+
+  binaryimagescanner-app:
+    build: binaryimagescanner-app
+    command: sh -c "/wait && flask run --host:0.0.0.0 --port 6000"
+    volumes:
+      - ./binaryimagescanner-app:/binaryimage
+    environment:
+      - FLASK_ENV=development
+      - FLASK_APP=app.py
+      - FLASK_RUN_PORT=5000
+    ports:
+      - "6000:5000"
+
+volumes:
+  node-modules:

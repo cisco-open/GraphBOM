@@ -1,0 +1,8 @@
+fastapi
+pydantic
+web3
+uvicorn
+SQLAlchemy
+mysql-connector-python
+flask_mysql_connector
+python-dotenv

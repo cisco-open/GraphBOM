@@ -1,0 +1,59 @@
+{
+    "System tested": "GraphBOM-software-supply-chain-security",
+    "Bugs":{
+        "features":[
+            {
+                "Dashboard_component":{
+
+                    "Web-UI_link": "http://localhost:3000/dashboard",
+                    "Web-UI_path": "/GraphBOM-software-supply-chain-security/web-app/src/components/Dashboard/Dashboard.js",
+                    "REPORT":{
+                        "Status":"Dashboard Web page is loading successfully",
+                        "Error":"After giving the GitHub repo URL in the dashboard it is not generating the dependency graph",
+                        "Error_message_on_Web-UI":"Invalid GitHub URL/Bad credentials",
+                        "Issue":"On backend GitHub repo url is downloading successfully but unable to store dependency graph and hashed dependency graph."
+                    },
+                    "Fix":{
+                        "Status":"No"
+                    }
+                },
+
+
+                "WEB3_component":{
+
+                    "Web-UI_link": "http://localhost:3000/blockchain",
+                    "Web-UI_path": "/GraphBOM-software-supply-chain-security/web-app/src/components/Dashboard/DashboardEnableDecentralizedCapability.js",
+                    "REPORT":{
+                        "Status":"blockchain Web page is loading successfully and rendering the data",
+                        "Suggestion":"After providing the Wallet address, contract address and web3 API key, make sure whether web3 was connected to a node or not."
+                    }
+                },
+
+
+                "DockerContainerScan-component":{
+
+                    "Web-UI_link": "http://localhost:3000/containerscan",
+                    "Web-UI_path": "/GraphBOM-software-supply-chain-security/web-app/src/components/Dashboard/DashboardContainerScanner.js",
+                    "REPORT":{
+                        "Status": "conatinerscan component is loading successfully and rendering the data"
+                    }
+                },
+
+
+                "BinaryImagescan-component":{
+                    
+                    "Web-UI_link": "http://localhost:3000/binaryimagescan",
+                    "Web-UI_path": "/GraphBOM-software-supply-chain-security/web-app/src/components/Dashboard/DashboardBinaryImageScanner.js",
+                    "REPORT":{
+                        "Status":"binaryimagescan web page is loading successfully but unable to fetch the data",
+                        "Issue": "In the backend getting OSERROR: dlopen((mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64'))"
+                    },
+                    "Fix":{
+                        "Status":"No"
+                    }
+                }
+            }
+           
+        ]
+    }
+}

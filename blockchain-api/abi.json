@@ -1,0 +1,337 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_graph_hash",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_reponame",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_graphql_param",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_pullreq",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_commits",
+				"type": "uint256"
+			},
+			{
+				"internalType": "int256",
+				"name": "_manifests",
+				"type": "int256"
+			},
+			{
+				"internalType": "string",
+				"name": "_releases",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_languages",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_forks",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_pullreq_commits",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_created_at",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_sbom",
+				"type": "string"
+			}
+		],
+		"name": "addProject",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_reponame",
+				"type": "string"
+			}
+		],
+		"name": "deleteProject",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_reponame",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_graph_hash",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_graphql_param",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_pullreq",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_commits",
+				"type": "uint256"
+			},
+			{
+				"internalType": "int256",
+				"name": "_manifests",
+				"type": "int256"
+			},
+			{
+				"internalType": "string",
+				"name": "_releases",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_languages",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_forks",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_pullreq_commits",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_created_at",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_sbom",
+				"type": "string"
+			}
+		],
+		"name": "updateProject",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getAllProjects",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "graph_hash",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "reponame",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "graphql_param",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pullreq",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "commits",
+						"type": "uint256"
+					},
+					{
+						"internalType": "int256",
+						"name": "manifests",
+						"type": "int256"
+					},
+					{
+						"internalType": "string",
+						"name": "releases",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "languages",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "forks",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "pullreq_commits",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "created_at",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "sbom",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "isValue",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint8",
+						"name": "deleted",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct CRUD.ProjectData[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_reponame",
+				"type": "string"
+			}
+		],
+		"name": "getProject",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "graph_hash",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "reponame",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "graphql_param",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pullreq",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "commits",
+						"type": "uint256"
+					},
+					{
+						"internalType": "int256",
+						"name": "manifests",
+						"type": "int256"
+					},
+					{
+						"internalType": "string",
+						"name": "releases",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "languages",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "forks",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "pullreq_commits",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "created_at",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "sbom",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "isValue",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint8",
+						"name": "deleted",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct CRUD.ProjectData",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

@@ -1,0 +1,8 @@
+angr
+angr-utils
+bingraphvis
+matplotlib
+python-dotenv
+flask
+flask_cors
+pydantic

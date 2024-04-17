@@ -1,0 +1,129 @@
+{
+    "System tested": "GraphBOM-software-supply-chain-security",
+    "packages":{
+        "list_of_updated_packages":[
+            {
+
+                "npm-package-1":{
+                    "package-name":"@babel/traverse",
+                    "ecosystem":"npm",
+                    "previous-package-version":"7.20.5",
+                    "package-version-updated-to":"7.23.2",
+                    "updated-date":"12/07/2023",
+                    "fix_tested":"Yes"
+                },
+
+
+                "npm-package-2":{
+                    "package-name": "@babel/core",
+                    "ecosystem":"npm",
+                    "previous-package-version":"7.20.5",
+                    "package-version-updated-to":"7.23.2",
+                    "updated-date":"12/07/2023",
+                    "fix_tested":"Yes"
+                },
+
+
+                "npm-package-3":{
+                    "package-name":"@babel/plugin-transform-runtime",
+                    "ecosystem":"npm",
+                    "previous-package-version":"7.19.6",
+                    "package-version-updated-to":"7.23.2",
+                    "updated-date":"12/07/2023",
+                    "fix_tested":"Yes"
+                },
+
+
+                "npm-package-4":{
+                    "package-name":"@babel/preset-env",
+                    "ecosystem":"npm",
+                    "previous-package-version":"7.20.5",
+                    "package-version-updated-to":"7.23.2",
+                    "updated-date":"12/07/2023",
+                    "fix_tested":"Yes"
+                },
+
+
+                "npm-package-5":{
+                    "package-name":"webpack",
+                    "ecosystem":"npm",
+                    "previous-package-version":"5.75.0",
+                    "package-version-updated-to":"5.76.0",
+                    "updated-date":"12/07/2023",
+                    "fix_tested":"Yes"
+                },
+
+
+                "npm-package-6":{
+                    "package-name":"d3-color",
+                    "ecosystem":"npm",
+                    "previous-package-version":"1.4.1",
+                    "package-version-updated-to":"3.1.0",
+                    "updated-date":"12/07/2023",
+                    "fix_tested":"Yes"
+                },
+
+
+                "npm-package-7":{
+                    "package-name":"@adobe/css-tools",
+                    "ecosystem":"npm",
+                    "previous-package-version":"4.0.1",
+                    "package-version-updated-to":"4.3.2",
+                    "updated-date":"12/07/2023",
+                    "fix_tested":"Yes"
+                },
+            
+
+                "npm-package-8":{
+                    "package-name":"axios",
+                    "ecosystem":"npm",
+                    "previous-package-version":"1.2.1",
+                    "package-version-updated-to":"1.6.0",
+                    "updated-date":"12/07/2023",
+                    "fix_tested":"Yes"
+            },
+
+
+                "npm-package-9":{
+                    "package-name":"postcss",
+                    "ecosystem":"npm",
+                    "previous-package-version":"8.4.19",
+                    "package-version-updated-to":"8.4.31",
+                    "updated-date":"12/07/2023",
+                    "fix_tested":"Yes"
+             },
+
+
+             "npm-package-10":{
+                "package-name":"word-wrap",
+                    "ecosystem":"npm",
+                    "previous-package-version":"1.2.3",
+                    "package-version-updated-to":"1.2.4",
+                    "updated-date":"12/07/2023",
+                    "fix_tested":"Yes"
+             },
+
+
+             "npm-package-11":{
+                "package-name":"semver",
+                    "ecosystem":"npm",
+                    "previous-package-version":"6.3.0",
+                    "package-version-updated-to":"6.3.1",
+                    "updated-date":"12/07/2023",
+                    "fix_tested":"Yes"
+             },
+
+
+             "npm-package-12":{
+                "package-name":"tough-cookie",
+                    "ecosystem":"npm",
+                    "previous-package-version":"4.1.2",
+                    "package-version-updated-to":"4.1.3",
+                    "updated-date":"12/07/2023",
+                    "fix_tested":"Yes"
+             }
+
+            }
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+pycryptodome
+flask==2.3.3
+PyGithub
+mysql-connector-python
+flask_mysql_connector
+python-dotenv
+flask_cors
+python-decouple
+flask[async]
+flask-restful
+gunicorn
+angr
+docker

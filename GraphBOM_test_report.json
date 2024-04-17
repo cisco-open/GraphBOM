@@ -1,0 +1,197 @@
+{
+    "System tested": "GraphBOM-software-supply-chain-security",
+    "bugs": {
+        "list_of_bugs_fixes": [
+            {
+
+                "manual_testing_1": {
+                    "folder": "/GraphBOM-software-supply-chain-security/lib/requirements.txt",
+                    "Bug": "Inside requirements.txt they used latest flask version, but _request_ctx_stack from the flask package is deprected from the flask>2.4",
+                    "Where_it_is": "/GraphBOM-software-supply-chain-security/lib/requirements.txt",
+                    "severity": "less severe",
+                    "Test_type": "Manual testing",
+                    "test_performed_date": "12/06/2023",
+                    "fix": {
+                        "status": "Yes",
+                        "changes": "To fix that bug I have changed flask version to 2.3.3 inside the requirements.txt",
+                        "fix_tested": "Yes"
+                    }
+                },
+
+
+                "manual_testing_2": {
+                    "folder": "/GraphBOM-software-supply-chain-security/web-app/src/App.js",
+                    "Bug": "NoModuleFound: 'login' error at line number 27th. Developer deleted the login page file from src folder but forgot to delete the 'import Login from './Login' line from App.js.",
+                    "Where_it_is": "Inside /GraphBOM-software-supply-chain-security/web-app/src/App.js at line number 27th.",
+                    "severity": "crashes application",
+                    "Test_type": "Manual testing",
+                    "test_performed_date": "12/06/2023",
+                    "fix": {
+                        "status": "Yes",
+                        "changes": "Commented the line -> 'import Login from './Login' from the file.",
+                        "fix_tested": "Yes"
+                    }
+                    
+                },
+
+                
+                "manual_testing_3":{
+                    "folder":"/GraphBOM-software-supply-chain-security/lib/app.py",
+                    "Bug":"Developer forgot to comment the '/login restApi(post method)' in app.py from 60th line to 83rd line.",
+                    "Where_it_is":"Inside /GraphBOM-software-supply-chain-security/lib/app.py from 60th line to 83rd line.",
+                    "severity":"warning",
+                    "Test_type":"Manual testing",
+                    "test_performed_date": "12/06/2023",
+                    "fix": {
+                        "status": "Yes",
+                        "changes": "Commented the both functions which are realted to the login page. def post(): at line number 60 and def login(): at line number 76th.",
+                        "fix_tested":"Yes"
+                    }
+                },
+
+
+                "manual_testing_4":{
+                    "folder":"/GraphBOM-software-supply-chain-security/docker-compose.yml",
+                    "Bug":"To run the application using Docker, the docker-compose.yml file is missing",
+                    "Where_it_is":"Added docker-compose.yml inside /GraphBOM-software-supply-chain-security folder.",
+                    "severity":"warning",
+                    "Test_type":"Manual testing",
+                    "test_performed_date": "12/06/2023",
+                    "fix": {
+                        "status":"Yes",
+                        "changes":"Added docker-compose.yml file to run the application on the docker desktop.",
+                        "fix_tested":"Yes",
+                        "commands_to_run_docker_file":"docker-compose build, and docker-compose up"
+                    }
+                },
+
+
+                "manual_testing_5":{
+                    "folder":"/GraphBOM-software-supply-chain-security/pre-installation-tools.sh",
+                    "Bug":"Don't install the pre installation tools inside your project folder.",
+                    "Where_it_is":"You can find the pre_installation.sh file inside /GraphBOM-software-supply-chain-security folder",
+                    "severity":"crashes application",
+                    "Test_type":"Manual testing",
+                    "test_performed_date": "12/06/2023",
+                    "fix":{
+                        "status":"Yes",
+                        "Where_to_install":"Open the './pre-installation-tools.sh' and execute the syft curl command, grype curl command inside the home directory terminal.",
+                        "fix_tested":"yes"
+                    }
+                },
+
+
+                "manual_testing_6": {
+                    "folder":"/GraphBOM-software-supply-chain-security/lib/requirements.txt",
+                    "Bug":"Getting unexpected errors while installing the angr library.",
+                    "Where_it_is":"Inside the /GraphBOM-software-supply-chain-security/lib/requirements.txt",
+                    "severity":"crashes application",
+                    "Test_type":"Manual testing",
+                    "test_performed_date": "12/06/2023",
+                    "fix":{
+                        "status":"yes",
+                        "changes":"Beforing cloning the project, Install cmake and pkg-config in your local desktop and upgrade setuptools, wheel by using pip in the venv.",
+                        "fix_tested":"yes"
+                    }
+                },
+
+                "manual_testing_7": {
+                    "folder":"/GraphBOM-software-supply-chain-security/web-app/src/components/Dashboard/Dashboard.js",
+                    "Bug": "Found incorrect string manipulation in the blockChainID function at line number 143",
+                    "Where_it_is": "Inside /GraphBOM-software-supply-chain-security/web-app/src/components/Dashboard/Dashboard.js",
+                    "severity":"crashes application",
+                    "Test_type":"Manual testing",
+                    "test_performed_date":"12/14/2023",
+                    "fix":{
+                        "status":"Yes",
+                        "changes":"Added split and join method to validate the github url in the blockChainID to get repo details for block chain.",
+                        "fix_tested":"Yes"
+                    }
+                },
+
+                "manual_testing_8": {
+                    "folder": "/GraphBOM-software-supply-chain-security/lib/python/getSBOM.py",
+                    "Bug": "Found incorrect string manipulation code inside the getScanSBOM function",
+                    "Where_it_is": "Inside getScanSBOM function after the git_uri = uri line",
+                    "severity":"crashes application",
+                    "Test_type":"Manual testing",
+                    "test_performed_date":"12/14/2023",
+                    "fix":{
+                        "status":"Yes",
+                        "changes":"Added repo_name_with_extension variable and assigned extra string manipulation to separate owner/reponame.git from the github url",
+                        "fix_tested":"Yes"
+                    }
+                },
+
+                "manual_testing_9": {
+                    "folder": "/GraphBOM-software-supply-chain-security/lib/python/getSbomScanSbom.py",
+                    "Bug": "Found incorrect string manipulation code inside the get_Scan_SBOM function",
+                    "Where_it_is": "Inside get_Scan_SBOM function after the git_uri = uri line",
+                    "severity":"crashes application",
+                    "Test_type":"Manual testing",
+                    "test_performed_date":"12/14/2023",
+                    "fix":{
+                        "status":"Yes",
+                        "changes":"Added repo_name_with_extension variable and assigned extra string manipulation to separate owner/reponame.git from the github url",
+                        "fix_tested":"Yes"
+                    }
+                },
+  
+                "test_DockerContainerscan":{
+                    "folder":"/GraphBOM-software-supply-chain-security/web-app/tests/test_DockerContainerscan.py",
+                    "Bug":"No bugs found",
+                    "Where_it_is":"Inside the /GraphBOM-software-supply-chain-security/web-app/tests folder",
+                    "severity":"None",
+                    "Test_type":"Web UI Automation",
+                    "Tools_used":"pytest, selenium",
+                    "test_performed_date": "12/06/2023",
+                    "Result": {
+                        "status":"Yes",
+                        "web_interaction_details": "It opens the website, navigates to the Container scan, pastes the Docker tag, after submitting the submit button, retrives the result, and downloads the CSV file."
+                    }
+                },
+
+
+                "test_blockchain-api":{
+                    "folder":"/Users/saimamidi/Desktop/GraphBomT/GraphBOM-software-supply-chain-security/blockchain-api.",
+                    "Bug":"No bugs found",
+                    "severity":"None",
+                    "Test_type":"Manual testing",
+                    "test_performed_date": "12/06/2023",
+                    "Result":{
+                        "status":"Yes",
+                        "backend_interaction_details":"Getting response 200 ok"
+                    }
+
+                },
+
+
+                "test_web3":{
+                    "folder":"/Users/saimamidi/Desktop/Graphbom/GraphBOM-software-supply-chain-security/blockchain-api/tests/test_web3.py",
+                    "Bug":"No bugs found",
+                    "severity":"None",
+                    "Test_type":"Automation testing",
+                    "test_performed_date": "12/08/2023",
+                    "Result":{
+                        "status":"Yes",
+                        "backend_interaction_details":"Connecting succesfully"
+                    }
+                },
+
+
+                "test_dashboard":{
+                    "folder":"/GraphBOM-software-supply-chain-security/web-app/tests/test_dashboard.py",
+                    "Bug":"No bugs in the frontend",
+                    "severity":"None",
+                    "Test_type":"Web UI Automation",
+                    "Tools_used":"pytest, selenium",
+                    "test_performed_date": "12/08/2023",
+                    "Result": {
+                        "status":"Yes",
+                        "web_interaction_details": "It opens the website, navigates to the dashboard page, pastes the Github url, and after submitting the submit button, retrives the result."
+                    }
+                }
+            }
+        ]
+    }
+}
